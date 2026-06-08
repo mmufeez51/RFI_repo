@@ -1,6 +1,6 @@
 # AI-Powered RFI Assistant 🏗️
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://rfirepo-lnu2bnhvebta9whgrgiohc.streamlit.app/)
 
 A Streamlit web application that leverages Google's Gemini AI to automatically generate formal Requests for Information (RFIs) for construction projects. By simply uploading a site photo and providing some notes, the assistant analyzes the context and produces a structured, professional RFI document ready to be sent to architects or engineers.
 
