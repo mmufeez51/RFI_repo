@@ -8,6 +8,40 @@ from PIL import Image
 # Configure page
 st.set_page_config(page_title="AI RFI Assistant", page_icon="🏗️", layout="wide")
 
+# Inject Custom CSS for an elegant background
+elegant_css = """
+<style>
+    /* Main app background gradient */
+    .stApp {
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    }
+    
+    /* Elegant translucent sidebar */
+    [data-testid="stSidebar"] {
+        background-color: rgba(255, 255, 255, 0.4) !important;
+        backdrop-filter: blur(10px) !important;
+    }
+    
+    /* Slightly transparent inputs for a glassmorphism feel */
+    div.stTextInput > div > div > input,
+    div.stTextArea > div > div > textarea {
+        background-color: rgba(255, 255, 255, 0.7) !important;
+        border: 1px solid rgba(255, 255, 255, 0.5) !important;
+        border-radius: 8px !important;
+    }
+    
+    /* Primary button premium styling */
+    button[kind="primary"] {
+        background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%) !important;
+        border: none !important;
+        box-shadow: 0 4px 15px rgba(0, 242, 254, 0.4) !important;
+        color: white !important;
+        border-radius: 8px !important;
+    }
+</style>
+"""
+st.markdown(elegant_css, unsafe_allow_html=True)
+
 # Set up the API key for Google Gemini
 # Prioritize Streamlit secrets, fallback to environment variable
 API_KEY = None
